@@ -1,6 +1,6 @@
 # Reddit API
-REDDIT_CLIENT_ID="MyCoolClientId"
-REDDIT_SECRET="MyCoolSecret"
-REDDIT_USERNAME="MyCoolUsername"
-REDDIT_PASSWORD="MyCoolPassword"
-REDDIT_USER_AGENT="script by /u/" # This can be anything you want.
+REDDIT_CLIENT_ID="SPutZuyghrh-jQ"
+REDDIT_SECRET="v79XznXGePsSCds3PEDAWB5nH4I"
+REDDIT_USERNAME="taskuratik"
+REDDIT_PASSWORD="Gatto661"
+REDDIT_USER_AGENT="animewow by /u/taskuratik" # This can be anything you want.
