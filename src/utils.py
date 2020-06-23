@@ -19,7 +19,7 @@ MAIN_DB_MIN_SIZE = "50mb"
 MAIN_DB_MAX_SIZE = "300mb"
 #MAIN_DB = DB_DIR + "/brain.db"
 SCORE_THRESHOLD = 0  # downvote
-TOP_SUBREDDIT_NUM = 25  # number of subreddits to search for repost-able content
+TOP_SUBREDDIT_NUM = 10  # number of subreddits to search for repost-able content
 MIN_SCORE = 0  # for posts to repost
 SUBMISSION_SEARCH_TEMPLATE = "https://api.pushshift.io/reddit/search/submission/?after={after}&before={before}&sort_type=score&sort=desc&subreddit={subreddit}"
 DAY = 86400  # POSIX day (exact value)
@@ -33,8 +33,8 @@ PROBABILITIES = {
   "LEARN": 0.02, 
   "DELETE": 0.02 }
 MAX_CACHE_SIZE = 128
-NUMBER_DAYS_FOR_POST_TO_BE_OLD = 300
-SUBREDDIT_LIST = ["aww"] # limit learning and posting to these subreddits. Empty = Random
+NUMBER_DAYS_FOR_POST_TO_BE_OLD = 365
+SUBREDDIT_LIST = [] # limit learning and posting to these subreddits. Empty = Random
 DISALLOWED_WORDS_FILENAME = os.path.join(BASE_DIR, "disallowed_words.txt")
 DISALLOWED_SUBS_FILENAME = os.path.join(BASE_DIR, "disallowed_subs.txt")
 # Logging options
@@ -50,8 +50,8 @@ SHOW_SLEEP_LOGGING = False
 # You can add multiple schedules to be run after x days of the bots life
 USE_SLEEP_SCHEDULE = False
 BOT_SCHEDULES = [
-  {"days": 0, "schedule": [((2,00),(7,00)), ((15,30),(21,30))]},
-  {"days": 4, "schedule": [((6,00),(12,00)), ((18,30),(23,59))]},
+  {"days": 0, "schedule": [((4,00),(5,00)), ((17,30),(19,30))]},
+  {"days": 4, "schedule": [((8,00),(10,00)), ((20,30),(23,20))]},
   ]
 
 if os.environ.get('PORT'):
@@ -59,8 +59,8 @@ if os.environ.get('PORT'):
   if not os.environ.get('NOSCHEDULE'):
     USE_SLEEP_SCHEDULE = True
     BOT_SCHEDULES = [
-      ("days": 0, "schedule": [((2,00),(7,00)), ((15,30),(21,30))]},
-      {"days": 4, "schedule": [((6,00),(12,00)), ((18,30),(23,59))]},
+      {"days": 0, "schedule": [((4,00),(5,00)), ((17,30),(19,30))]},
+      {"days": 4, "schedule": [((8,00),(10,00)), ((20,30),(23,20))]},
       {"days": 12, "schedule": [((9,00),(12,30)), ((18,00),(22,00))]},
       ]
 
@@ -346,6 +346,3 @@ def is_time_between(begin_time, end_time, check_time=None):
         return check_time >= begin_time and check_time <= end_time
     else: # crosses midnight
         return check_time >= begin_time or check_time <= end_time
-
-
-
