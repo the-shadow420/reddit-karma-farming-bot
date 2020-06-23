@@ -1,6 +1,6 @@
 # Reddit API
-REDDIT_CLIENT_ID="SPutZuyghrh-jQ"
-REDDIT_SECRET="v79XznXGePsSCds3PEDAWB5nH4I"
-REDDIT_USERNAME="taskuratik"
-REDDIT_PASSWORD="Gatto661!?"
-REDDIT_USER_AGENT="animewow by /u/taskuratik" # This can be anything you want.
+REDDIT_CLIENT_ID="489CdegOiN59ZA"
+REDDIT_SECRET="d1lO2_CAaMH-kGZkWhkGUjMYx3Y"
+REDDIT_USERNAME="GlumExcitement9"
+REDDIT_PASSWORD="0610052417ebrahim"
+REDDIT_USER_AGENT="INeedKarma by /u/GlumExcitement9" # This can be anything you want.
